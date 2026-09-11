@@ -2,24 +2,64 @@ const game = "PUZZLE";
 const name = (en, es, ru) => ({ en, es, ru });
 
 const images = [
+    // Paintings
     { id:"starrynight", file:"Source/Assets/Images/starrynight.jpg", name:name("Starry Night","La noche estrellada","Звёздная ночь") },
-    { id:"americangothic", file:"Source/Assets/Images/americangothic.jpg", name:name("American Gothic","Gótico americano","Американская готика") },
+    { id:"american", file:"Source/Assets/Images/american.jpg", name:name("American Gothic","Gótico americano","Американская готика") },
     { id:"monalisa", file:"Source/Assets/Images/monalisa.jpg", name:name("Mona Lisa","La Gioconda","Мона Лиза") },
-    { id:"lastsupper", file:"Source/Assets/Images/thelastsupper.jpg", name:name("The Last Supper","La Última Cena","Тайная вечеря") },
-    { id:"pearlearring", file:"Source/Assets/Images/pearlearring.jpg", name:name("Girl with a Pearl Earring","La joven de la perla","Девушка с жемчужной серёжкой") },
-    { id:"greatwave", file:"Source/Assets/Images/thegreatwave.jpg", name:name("The Great Wave off Kanagawa","La gran ola de Kanagawa","Большая волна в Канагаве") },
-    { id:"scream", file:"Source/Assets/Images/thescream.jpg", name:name("The Scream","El grito","Крик") },
-    { id:"washington", file:"Source/Assets/Images/washington.jpg", name:name("Washington Crossing the Delaware","Washington cruzando el Delaware","Вашингтон переправляется через Делавэр") },
-    { id:"waterlily", file:"Source/Assets/Images/waterlilypond.jpg", name:name("The Water-Lily Pond","El estanque de nenúfares","Пруд с кувшинками") },
-    { id:"goldengate", file:"Source/Assets/Images/goldengatebridge.jpg", name:name("Golden Gate Bridge","Puente Golden Gate","Мост Золотые Ворота") },
+    { id:"lastsupper", file:"Source/Assets/Images/lastsupper.jpg", name:name("The Last Supper","La última cena","Тайная вечеря") },
+    { id:"pearl", file:"Source/Assets/Images/pearl.jpg", name:name("Girl with a Pearl Earring","La joven de la perla","Девушка с жемчужной серёжкой") },
+    { id:"wave", file:"Source/Assets/Images/wave.jpg", name:name("The Great Wave off Kanagawa","La gran ola de Kanagawa","Большая волна в Канагаве") },
+    { id:"scream", file:"Source/Assets/Images/scream.jpg", name:name("The Scream","El grito","Крик") },
+    { id:"washington", file:"Source/Assets/Images/washington.jpg", name:name("Washington Crossing the Delaware","Washington cruzando el río Delaware","Вашингтон переправляется через Делавэр") },
+    { id:"waterlily", file:"Source/Assets/Images/waterlily.jpg", name:name("The Water-Lily Pond","El estanque de nenúfares","Пруд с кувшинками") },
+
+    // Places & Landmarks
+    { id:"goldengate", file:"Source/Assets/Images/goldengate.jpg", name:name("Golden Gate Bridge","Puente Golden Gate","Мост Золотые Ворота") },
     { id:"timessquare", file:"Source/Assets/Images/timessquare.jpg", name:name("Times Square","Times Square","Таймс-сквер") },
-    { id:"napali", file:"Source/Assets/Images/napalicoast.jpg", name:name("Nā Pali Coast","Costa de Nā Pali","Побережье На-Пали") },
-    { id:"bliss", file:"Source/Assets/Images/bliss.jpg", name:name("Bliss (Bucolic Green Hills)","Bliss (colinas verdes bucólicas)","Bliss (буколические зелёные холмы)") },
+    { id:"napali", file:"Source/Assets/Images/napali.jpg", name:name("Nā Pali Coast","Costa de Nā Pali","Побережье На-Пали") },
+    { id:"capitol", file:"Source/Assets/Images/capitol.jpg", name:name("Capitol","Capitolio","Капитолий") },
+
+    // Animals
+    { id:"collie", file:"Source/Assets/Images/collie.jpg", name:name("Border Collie Dog","Border collie","Собака породы бордер-колли") },
+    { id:"dog", file:"Source/Assets/Images/dog.jpg", name:name("Samoyed Dog","Perro samoyedo","Самоедская собака") },
+    { id:"meerkat", file:"Source/Assets/Images/meerkat.jpg", name:name("Meerkat","Suricata","Сурикат") },
+    { id:"cat", file:"Source/Assets/Images/cat.jpg", name:name("Cat","Gato","Кошка") },
+    { id:"tiger", file:"Source/Assets/Images/tiger.jpg", name:name("Tiger","Tigre","Тигр") },
+    { id:"rhino", file:"Source/Assets/Images/rhino.jpg", name:name("White Rhino","Rinoceronte blanco","Белый носорог") },
+    { id:"panda", file:"Source/Assets/Images/panda.jpg", name:name("Panda","Panda","Панда") },
+
+    // Vehicles
+    { id:"bronco", file:"Source/Assets/Images/bronco.jpg", name:name("Ford Bronco RTR 2027","Ford Bronco RTR 2027","Ford Bronco RTR 2027") },
+    { id:"lambo", file:"Source/Assets/Images/lambo.jpg", name:name("Lamborghini Revuelto Miura","Lamborghini Revuelto Miura","Lamborghini Revuelto Miura") },
+    { id:"bugatti", file:"Source/Assets/Images/bugatti.jpg", name:name("Bugatti Chiron Super Sport","Bugatti Chiron Super Sport","Bugatti Chiron Super Sport") },
+
+    // Games
+    { id:"java", file:"Source/Assets/Images/java.jpg", name:name("Minecraft Java Edition","Minecraft Java Edition","Minecraft Java Edition") },
+    { id:"copper", file:"Source/Assets/Images/copper.jpg", name:name("Minecraft The Copper Age","Minecraft The Copper Age","Minecraft The Copper Age") },
+    { id:"tiny", file:"Source/Assets/Images/tiny.jpg", name:name("Minecraft Tiny Takeover","Minecraft Tiny Takeover","Minecraft Tiny Takeover") },
+    { id:"nether", file:"Source/Assets/Images/nether.jpg", name:name("Minecraft Nether","Nether de Minecraft","Нижний мир Minecraft") },
+    { id:"forza5", file:"Source/Assets/Images/forza5.jpg", name:name("Forza Horizon 5","Forza Horizon 5","Forza Horizon 5") },
+    { id:"forza6", file:"Source/Assets/Images/forza6.jpg", name:name("Forza Horizon 6","Forza Horizon 6","Forza Horizon 6") },
+    { id:"pikachu", file:"Source/Assets/Images/pikachu.jpg", name:name("Pikachu","Pikachu","Пикачу") },
     { id:"system", file:"Source/Assets/Images/system.jpg", name:name("System 1743","System 1743","System 1743") },
-    { id:"capitol", file:"Source/Assets/Images/capitol.jpg", name:name("Capitol","Capitolio","Капитолий") }
+
+    // Television
+    { id:"office", file:"Source/Assets/Images/office.jpg", name:name("The Office","The Office","Офис") },
+
+    // Other
+    { id:"bliss", file:"Source/Assets/Images/bliss.jpg", name:name("Bliss (Bucolic Green Hills)","Bliss (colinas verdes bucólicas)","Bliss (Безмятежность)") },
+
+    // Seasonal (Fall) [September, October, November]
+    { id:"dolomites", file:"Source/Assets/Images/dolomites.jpg", name:name("Dolomites","Dolomitas","Доломитовые Альпы") },
+    { id:"pumpkins", file:"Source/Assets/Images/pumpkins.jpg", name:name("Pumpkins","Calabazas","Тыквы") },
+    { id:"welcome", file:"Source/Assets/Images/welcome.jpg", name:name("Fall Welcome","Bienvenida al otoño","Осеннее приветствие") },
+
+    // Seasonal (Winter) [December, Janurary]
+//  { id:"pine", file:"Source/Assets/Images/pine.jpg", name:name("Pine Cones","Piñas","Шишки") },
+//  { id:"village", file:"Source/Assets/Images/village.jpg", name:name("Mountain Village","Pueblo de montaña","Горная деревня") }
 ];
 
-const grids = [2, 3, 4, 5, 6, 7, 8];
+const grids = [2, 3, 4, 5, 6, 7, 8, 9, 10];
 const shuffles = ["light", "medium", "heavy", "full"];
 const toggles = ["on", "off"];
 
